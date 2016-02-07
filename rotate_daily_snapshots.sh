@@ -8,20 +8,7 @@
 
 unset PATH
 
-# ------------- system commands used by this script --------------------
-ID=/usr/bin/id;
-ECHO=/bin/echo;
-MOUNT=/bin/mount;
-RM=/bin/rm;
-MV=/bin/mv;
-CP=/bin/cp;
-DATE=/bin/date;
-
-# ------------- file locations -----------------------------------------
-
-MOUNT_DEVICE=nas1:/nfs/linuxbackup;
-SNAPSHOT_RW=/root/snapshot;
-DIAGNOSTICLOG=/home/scott/backupdiag.log;
+source /opt/scripts/backup/backup.config;
 
 # ------------- the script itself --------------------------------------
 $TOUCH $DIAGNOSTICLOG;

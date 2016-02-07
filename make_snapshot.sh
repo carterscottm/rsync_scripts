@@ -8,31 +8,8 @@
 
 unset PATH	# suggestion from H. Milz: avoid accidental use of $PATH
 
-# ------------- system commands used by this script --------------------
-ID=/usr/bin/id;
-ECHO=/bin/echo;
-MOUNT=/bin/mount;
-RM=/bin/rm;
-MV=/bin/mv;
-CP=/bin/cp;
-TOUCH=/bin/touch;
-DATE=/bin/date;
-SUSPEND=/usr/sbin/pm-suspend;
-RSYNC=/usr/bin/rsync;
-TAIL=/usr/bin/tail;
-SED=/bin/sed;
-# ------------- file locations -----------------------------------------
+source /opt/scripts/backup/backup.config;
 
-MOUNT_DEVICE=nas1:nfs/linuxbackup;
-SNAPSHOT_RW=/root/snapshot;
-EXCLUDES=/opt/scripts/backup/backup_exclude;
-INCLUDES=/opt/scripts/backup/backup_include;
-
-# ------------- set date and time for backup log -----------------------
-
-DATESTAMP=$($DATE +%Y%m%d%H%M);
-LOGFILE=rsync.log.$($DATE +%Y%m%d%H%M%S);
-DIAGNOSTICLOG=/home/scott/backupdiag.log;
 # ------------- the script itself --------------------------------------
 $TOUCH $DIAGNOSTICLOG;
 $ECHO "*****************************************************************************" >> $DIAGNOSTICLOG;
