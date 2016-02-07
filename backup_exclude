@@ -1,0 +1,11 @@
+/nas/**
+/opt/scripts/backup/stayawake.log
+/opt/scripts/backup/.stayawake.*
+/home/scott/DNA
+/home/scott/Dropbox
+/home/scott/.cache
+/home/scott/.mozilla/firefox
+/home/scott/.PlayOnLinux
+/home/scott/.dropbox
+/home/scott/.dropbox.dist
+/home/scott/.wine/drive_c/BGT

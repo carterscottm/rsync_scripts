@@ -1,0 +1,12 @@
+/etc/
+/etc/**
+/home/
+/home/**
+/opt/
+/opt/**
+/usr/
+/usr/**
+/var/
+/var/www/
+/var/www/**
+- *
