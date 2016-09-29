@@ -28,12 +28,12 @@ fi;
 
 
 # step 1: delete the oldest snapshot, if it exists:
-if [ -d $SNAPSHOT_RW/monthly.11 ] ; then			\
-$RM -rf $SNAPSHOT_RW/monthly.11 ;				\
+if [ -d $SNAPSHOT_RW/monthly.11 ] ; then		\
+$RM -rf $SNAPSHOT_RW/monthly.11 ;			\
 fi ;
 
 # step 2: shift the middle snapshots(s) back by one, if they exist
-if [ -d $SNAPSHOT_RW/monthly.10 ] ; then			\
+if [ -d $SNAPSHOT_RW/monthly.10 ] ; then		\
 $MV $SNAPSHOT_RW/monthly.10 $SNAPSHOT_RW/monthly.11 ;	\
 fi;
 
