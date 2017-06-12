@@ -13,7 +13,7 @@ source /opt/scripts/backup/backup.config;
 # ------------- the script itself --------------------------------------
 $TOUCH $DIAGNOSTICLOG;
 $ECHO "*****************************************************************************" >> $DIAGNOSTICLOG;
-$ECHO "$($DATE) - WEEKLY ROTATION STARTED" >> $DIAGNOSTICLOG;
+$ECHO "$($DATE) - MONTHLY ROTATION STARTED" >> $DIAGNOSTICLOG;
 # make sure we're running as root
 if (( `$ID -u` != 0 )); then { $ECHO "$($DATE) - Sorry, must be root.  Exiting..."; >> $DIAGNOSTICLOG; exit 1; } fi
 
@@ -96,4 +96,4 @@ if (( $? )); then
 	exit;
 } fi;
 $ECHO "ls -la $MOUNT_DEVICE/$SNAPSHOT_RW | sed -e 's/.*4.0K //'"
-$ECHO "$($DATE) - WEEKLY ROTATION FINISHED" >> $DIAGNOSTICLOG;
+$ECHO "$($DATE) - MONTHLY ROTATION FINISHED" >> $DIAGNOSTICLOG;
