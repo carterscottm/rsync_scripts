@@ -27,7 +27,6 @@ if (( $? )); then
 }
 fi;
 
-
 # rotating snapshots
 
 # step 1: delete the oldest snapshot, if it exists:
@@ -73,6 +72,7 @@ $MV $SNAPSHOT_RW/$LOGFILE $SNAPSHOT_RW/daily.0/
 # step 5: update the mtime of daily.0 to reflect the snapshot time
 $TOUCH $SNAPSHOT_RW/daily.0 -t $DATESTAMP;
 
+$RM $SNAPSHOT_RW/rsync.log.*
 # and thats it for home.
 
 # now remount the RW snapshot mountpoint as readonly

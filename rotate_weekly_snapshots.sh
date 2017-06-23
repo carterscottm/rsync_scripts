@@ -63,6 +63,6 @@ if (( $? )); then
 	$ECHO "$($DATE) - snapshot: could not remount $SNAPSHOT_RW readonly" >> $DIAGNOSTICLOG;
 	exit;
 } fi;
-$ECHO "ls -la $MOUNT_DEVICE/$SNAPSHOT_RW | sed -e 's/.*4.0K //'"
+$ECHO "ls -la $SNAPSHOT_RW | sed -e 's/.*4.0K //'"
 $ECHO "$($DATE) - WEEKLY ROTATION FINISHED" >> $DIAGNOSTICLOG;
 
