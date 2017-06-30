@@ -1,6 +1,6 @@
 /nas/**
-/opt/scripts/backup/stayawake.log
-/opt/scripts/backup/.stayawake.*
+/opt/scripts/stayawake/stayawake.log
+/opt/scripts/stayawake/.*
 /home/scott/DNA
 /home/scott/Dropbox
 /home/scott/.cache

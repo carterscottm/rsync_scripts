@@ -7,8 +7,8 @@
 # ----------------------------------------------------------------------
 
 unset PATH	# suggestion from H. Milz: avoid accidental use of $PATH
-
-source /opt/scripts/backup/backup.config;
+CWD=`dirname $(realpath $0)`
+source $CWD/backup.config;
 
 # ------------- the script itself --------------------------------------
 $TOUCH $DIAGNOSTICLOG;
