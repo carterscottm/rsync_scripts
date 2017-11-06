@@ -1,6 +1,4 @@
 /nas/**
-/opt/scripts/backup/stayawake.log
-/opt/scripts/backup/.stayawake.*
 /home/scott/Dropbox
 /home/scott/.cache
 /home/scott/.PlayOnLinux
