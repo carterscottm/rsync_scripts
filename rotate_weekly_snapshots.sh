@@ -60,6 +60,11 @@ fi;
 # note: do *not* update the mtime of weekly.0; it will reflect
 # when daily.1 was made, which should be correct.
 
+
+# Update the bare-metal backup media set
+mondoarchive -OVn nfs://10.20.30.60:/mainbackup -I / -E "/nas|/home/scott/Dropbox" -T /tmp -9 -D
+
+
 # now remount the RW snapshot mountpoint as readonly
 
 $MOUNT -o remount,ro $MOUNT_DEVICE $SNAPSHOT_RW ;
